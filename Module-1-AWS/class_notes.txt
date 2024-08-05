@@ -241,4 +241,1805 @@ Day 2: 18th July 2024
 	GITHUB is a Remote Repository for managing the files and folders.
 		
 		
+		
+	
+######################
+Day 3: 19th July 2024
+######################	
+
+
+	AWS Cloud Platform :
+	
+	Create AWS Free tier Account 
+	
+	Connect to AWS Account 
+	
+	Login to AWS Console
+	
+	Explore various AWS Services 
+	
+	Create EC2 Instances (VMs)
+	
+	Connect to EC2 Instances 
+	
+	
+	Create AWS Free tier Account :::
+
+			https://signin.aws.amazon.com/signup?request_type=register			# To Create an AWS Account 
+			
+			https://aws.amazon.com/console/										# Login to AWS Account
+			
+
+	
+	Create AWS Free tier Account ::::
+	
+		To Create AWS Account :
+			AWS Free tier Account 
+				- 12 Months 
+	
+		
+			- Active Email_ID
+			- Mobile Number 
+			- Credit/Debit Card Number (Enabled with International Transation)
+			- PAN Card Number
+			
+		Login to AWS Console as a root user using email_id.
+			https://aws.amazon.com/console/	
+			
+			
+		Upon Login to AWS Console 
+		
+			Understand AWS Dashboard
+			
+			Setup the Region - Choose the nearest region
+			
+			Choose the services from the service catalog
+			
+			EC2(Elastic Compute Cloud- VM) Service 
+			
+			
+			AWS Cloud Platform 
+			
+				IAAS 
+				Infra-Structure As Code 
+				
+				AWS Regions 			# Geographical Location where AWS Data Centers are located.
+					Availability Zones (Data Centers)
+				
+				for any AWS Region, there will be 2 avaialbility zones!
+				
+				Mumbai region - ap-south-1a, ap-south-1b
+				
+				Servers 
+				
+				
+				Telecomm service provider --- SP1 --> outlets 
+				
+				
+			
+	Create EC2 Instances (VMs)
+	
+		What is EC2 Instances ???
+		
+			It is a Computing Device/Server/Virtual Machine
+			
+		Why we need EC2 Instances/ Virtual Machine?		
+			
+			Run a Application - Java/.Net/Python 
+				Need a Computing Environment/Servers
+				
+			Create DataBase 
+				
+		Need for cloud computing ?
+		
+		AWS is one of the Cloud Service providers.
+		
+			To avail the IT Services thru internet.
+				- Server 	--> Virtual Machines 
+				- Storage 
+				- Database server 
+				- Networking
+				
+	
+		EC2 Instances :
+		
+			Create Any Number of EC2 Instances 
+			
+			Billing/Usage of the Instances!
+			
+				It is always recommended to check the billing dashboard regularly and monitor the usage.
+			
+			Pay as you use Model 
+			
+			
+			Server :
+			
+				CPU 
+				RAM 
+				Storage 
+		
+			1 EC2 Instance -- AWS provides 30GB of Storage per month 
+			
+				1 VM   ==> 750 Hrs per month
+				
+				10 VMs ==> 75 Hrs / month  --> 10 Hrs (actual usage)
+				
+			
+		Create EC2 Instances ::::
+		
+			- First Create EC2 Instances with default properties 
+			
+			
+			EC2 Instance / Virtual Machine ?
+			
+			Why to Create EC2 Instance / Virtual Machine ?
+				CPU 
+				RAM 
+				Storage 
+				
+				OS
+				
+				Run a Application - Java/.Net/Python 
+				
+				
+			EC2 Instances
+				1 CPU & 1GB of RAM  	--> Instance Type
+				
+				Operating System		--> AMI (Amazon Machine Image - Server template uset create VMs)
+				
+				
+				network
+				storage
+				
+				
+					Linux OS 
+						ubuntu 
+					Windows 
+					Mac 
+				
+				
+			Why we need VM (or) Why to Create VM ???
+			
+			
+				
+		To 	Create EC2 Instances ::::		
+				
+			1. Login to AWS Console 
+			2. Goto EC2 Dashboard by Choosing EC2 Service 
+			3. Click on Launch Instance
+			4. Enter the Name of Instance 
+			5. Choose Ubuntu v20.24 AMI 
+			6. t2.micro Instance Type
+			7. Authentication to Login to the EC2 Instance
+				- Key Based Authentication
+					- key pair 
+						Public and Private Key
+				Click on Create New Key Pair
+				On the Key Pair Dialog
+					Just Enter the Key pair Name and Create.
+				
+						
+			
+	AWS Cloud Platform :
+	
+	Create AWS Free tier Account 
+	
+	Connect to AWS Account 
+	
+	Login to AWS Console
+	
+	Explore various AWS Services 
+	
+	Create EC2 Instances (VMs)			
+			
+
+Next :
+
+	Connect to EC2 Instances 
+	
+	Used the EC2 Instances 
+	
+	AWS IAM Services 
+
+
+
+######################
+Day 4: 22nd July 2024
+######################
+
+
+	Connect to EC2 Instances 
+	
+	Used the EC2 Instances 
+	
+	AWS IAM Services
+	
+	Create EC2 Instances :
+	
+		Ubuntu Machine :
+		
+		Login to Ubuntu Machine ?
+		
+		EC2 Instance :
+		
+			Host Name : IP Address 
+			
+				Public IP Address 	==> Is Used to access the VM from external network
+										Public IP Address will change whenever we restart the EC2 Instance
+						
+				Private IP Address 	==> Is used to access the VM within the Network
+										Private IP Address will never change 
+										
+										
+				Elastic IP Address 	==> Is a static IP Address 
+										Can be assigned to VM
+	
+		2 EC2 Instances :
+		
+			VM1 & VM2 
+			
+		AWS Cloud platform ::			AZURE Cloud Platform
+		
+			EC2 Instance1					Virtual Machine1
+
+			EC2 Instance2 					Virtual Machine2
+
+
+		
+		Network Protocol 
+		
+			SSH Protocol 
+				Enable SSH(Secure SHell) Connection
+			
+				--> Host Name 			--> Public IP Address fo the Node	
+				--> User Name 			--> User_Name 	Default User Name for Ubuntu OS: ubuntu
+				--> User Credentials	--> Private Key
+				
+				
+			Key Pair :	Used to Securely connect to your instance.
+				Public Key 
+				Private Key	==> *.pem
+				
+			SSH Authentication Types :::
+			
+				Password based Authentication
+				
+				Key Based Authentication
+					Public Key 
+					Private Key	==> *.pem					
+				
+				Token Based Authentication
+				Passwordless Authentication
+				
+				
+			To Access Gmail Server :
+				Host Name : www.gmail.com 
+				User ID 
+				Password 
+				
+	Connect to EC2 Instances :::
+	
+		EC2 Instance Connect Option 		# Done through Browser Window 
+		
+		SSH Agents(Tool installed in the Local Windows Machine to connect to EC2 Instances)
+			Windows Users :
+			
+				Install MobaXterm 		#	https://mobaxterm.mobatek.net/download-home-edition.html
+		
+		Terminal (Mac/Linux/Windows Users)
+		
+		
+
+IAM Service :::
+
+	Identity and Access Management Service :
+	
+		- Used to Create User IDs 
+		- Create User Groups
+		- Define User Access Level
+		- Create User Roles & Policies to access other aws resources 
+		
+		
+		root user 	- Complete Access to AWS Resources
+		
+		Infra-Structure Management Team 
+		
+		dev user 	- Wants to create EC2 Instance ?
+		Testing Teams 
+		
+		
+		
+
+	How to access AWS Console as a IAM User ?
+	
+	
+	AWS ACCOUNT :
+	
+		root user account			# Default Account with full Administrator/Owner Access!
+									# This will be at the Enterprise level
+									# Using Email_ID and Password we can login.
+	
+	
+		Dev_Team 					# User1 & Password and allow them to access the AWS Console with limited access.
+		
+		Testing Team 
+		
+		Infra-Structure Mgmt Team	
+		
+		
+		
+	AWS Console :
+	
+		root user 				# Admin User
+		
+######################
+Day 5: 23rd July 2024
+######################	
+
+Module 1 (I) 
+
+Identity and access management
+Introduction to IAM
+IAMFeatures
+Protect your AWS by different authentication system
+AWS User Account and Groups in detail Associating policies
+to the user and groups Introduction about Roles and its Use
+Multi Factor Authentication AWS
+Organization
+IAM Product Demonstration (LAB)
+Knowledge Check
+
+IAM Service :::
+
+	Identity and Access Management Service : 
+	
+	- Global Service
+	
+		- Used to Create User IDs 
+		- Create User Groups
+		- Define User Access Level
+		- Create User Roles & Policies to access other aws resources 
+		
+		
+		root user 	- Complete Access to AWS Resources
+		
+		Infra-Structure Management Team 
+		
+		dev user 	- Wants to create EC2 Instance ?
+		Testing Teams 
+		
+		
+		
+
+	How to access AWS Console as a IAM User ?
+	
+	
+	AWS ACCOUNT :
+	
+		root user account			# Default Account with full Administrator/Owner Access!
+									# This will be at the Enterprise level
+									# Using Email_ID and Password we can login.
+	
+	
+		Dev_Team 					# User1 & Password and allow them to access the AWS Console with limited access.
+		
+		Testing Team 
+		
+		Infra-Structure Mgmt Team	
+		
+		
+		
+	AWS Console :
+	
+		root user 				# Admin User
+		
+		
+		
+	AWS Account :
+	
+		root Account 
+			- It is used to setup the Account/ Administration activities 
+			
+			
+		IAM Account 
+		
+		
+	AWS User Management :
+
+		We use IAM Service to Create and Manage the Users on AWS Platform
+		
+		IAM User Names are create by the Root User.
+		
+		Authentication :
+		
+			Who can Access ? using valid user credentials.
+		
+		www.gmail.com ==> Email Server ?
+		
+			valid email_id & Credential
+			
+			send/recv/delete -- Actions?
+		
+		
+		Authorization :
+		
+			What can be done?
+		
+			send/recv/delete -- Actions?	
+
+
+		RBAC :	Role Based Access Control :
+		
+		Server :
+		
+		Application Development Server :
+		
+			User : Sam wants to access the Application Development Server 
+			Developer
+			
+				Valid User Name/Password 
+				
+				Logged In.		Successful		# Authentication
+				
+				Sam wants to Install a development Tool - 
+				We never allow any developer to install any tool on this server. 
+				Means, Developers are NOT-Authorized to Install any tool.
+					
+		
+		
+			Developers					
+			
+			Administrators ::
+			
+			User : John --> Admin user can able to login and install or manage any packages on this server.
+			Means, only Admins are Authorized to install the tools
+			
+			RBAC : 
+			
+				Administrators
+				
+				Developers
+				
+				Testers 
+				
+			
+			Server1 :
+			
+				Should be accessible only the Developers 
+				
+				developer1 --> allow access 
+				developer2 --> allow access
+			
+				1000 developers -- looking for access ?
+				
+				We always manage the users as a group.
+				
+				As a best practise, it is always recommended to manage the users a group.
+				
+			
+		
+		
+		
+		user1			user2				user3				user4					user5
+		
+									sec grp
+			ADMIN Group							DEVELOPER GROUP			
+			
+			
+		The User Group is used to maintain the list of Users.
+		The User Group will not any any group within that group. i.e., there is no sub-group concept in RBAC.
+		
+		User can be part of more than one group.
+		
+		
+		Authentication:
+		
+			IAM Authentication Methods 
+			
+				- Password 
+				
+				- Access Token / Secret Keys 
+				
+				- MFA - Multi-Factor Authentication
+				
+				
+		User Access :
+		
+		Resource Access :  We need to configure IAM 
+		
+		
+		EC2 Instance :
+		
+			Linux Box :
+			
+				Storage/Database Service
+				
+				
+				
+	How to Create User 
+
+	How to Create User Group & Add Users to that User Group 
+	
+	How to setup the previleges to that user based on Group level access 
+	
+	Role 
+	
+	Security Policies 
+	
+	
+	1. Login to AWS Console as a root user
+	
+	
+	User Groups :::
+
+			- Used to maintain the set of users for easy management
+			
+			Steps: 
+			
+			- Create User Group
+			- Assign any policy(Permission) to that group 
+			- Add Users to that group 
+			
+			
+	
+	Users :::
+		
+			- Any individual who seek access to AWS Account 
+			
+			Steps:
+			
+			- Create User 
+			- Assign the user to one or more user group
+				Note: As a best practise, user should be part of a group.
+			- The User permissions will be automatically assigned to that user through the user group.
+			
+	
+	Roles :::
+	
+			- Role are set of credentials/access to any other resource
+
+			- Create Role 
+			- Attach the Policy that role 
+	
+	
+	
+	Policies :::
+
+			Is the permission defined for any user/group or service.
+			
+			
+	Infra-Structure Management Team :
+	
+		IAC Tools like Cloudformation 
+		
+			- To Create Policies
+			- To Customise Policies and Roles 
+			
+	Cloudformation
+	
+	
+	Next :
+	
+		IAM User Login Process and Authentication
+
+			Authentication:
+			
+				IAM Authentication Methods 
+				
+					- Password 
+					
+					- Access Token / Secret Keys 
+					
+					- MFA - Multi-Factor Authentication
+				
+
+		
+		
+		Resources and its roles and policies 
+	
+	
+
+				
+######################
+Day 6: 25th July 2024
+######################	
+
+	IAM Roles / Policies 
+	
+	
+	Purpose of Creating the Roles ???
+	
+	Which Resource / Use Cases ?
+	
+	How to Attach ?
+	
+	
+	Standards :
+	
+		User-Level
+		Credentials 
+		Server Level 
+		Tools 
+		
+	Tags are additional label that we assign to any AWS Resource 
+	
+	User Name : user1,user2,user3 
+
+	department : dev 
+	
+	As a best practise, it is recommented to tag any resource we create.
+	loksai_002
+	
+	
+	Create Policy using GUI Mode :
+	Using Visual Editor 
+	
+	
+		
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "*"
+        }
+    ]
+}	
+	
+	
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "*"
+        }
+    ]
+}
+	
+				
+				
+				
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "ec2:Describe*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "elasticloadbalancing:Describe*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:ListMetrics",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:Describe*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "autoscaling:Describe*",
+            "Resource": "*"
+        }
+    ]
+}				
+				
+			
+AWS Account Management :
+
+	root user				# Infra-Structure Team 	--> Admin_User - ID & Password	
+	
+	User_Group :
+		Admin_User_Group 
+			Dev_Admin_User1
+			Test_Admin_User1
+			RL_Admin_User1
+			
+	dev_group :
+			Dev_Admin_User1
+			dev_user1
+			dev_user2
+			
+	
+Dev Team
+
+	Create an Dev_Admin_user
+	
+	Dev_Admin_User1 - this user can have access to create other users within the dev_group
+
+1 - 100 Users
+
+Test Team 
+
+	Create an Test_Admin_user
+
+	Test_Admin_User1 - this user can have access to create other users within the test_group
+	
+1 - 100 Users
+
+
+Release Mgmt Team 
+
+	RL_Admin_User1 - this user can have access to create other users within the rl_group
+	
+	Create an RL_Admin_user
+	
+1 - 100 Users
+	
+		
+	
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "*"
+        }
+    ]
+}
+
+S3 : Simple Storage service 		# Google Drive 	
+
+
+
+Always Login to AWS Console as a IAM User:
+
+To do this :
+
+	Create a IAM User 
+	Attach the AdministratorAccess 
+	Create MFA
+
+
+EC2/S3//////////	
+	
+	IAM Services needed to this use case ???
+	
+	
+	Root User Creates IAM User				# User / User Group(Attach the required policy at the group level) 
+	
+	IAM User Create EC2 Instance 			# This previlege will be assigned thru User group
+	
+	EC2 Instance can have access to S3 Bucket to save the files		# IAM Role(Attach the required policy(S3:*) to this role)
+	
+	
+	user/user_groups/roles/policies 
+	
+	password 
+	MFA
+	Access_Key & Secret_Keys
+	
+	Access the console as a IAM User 
+	
+	How to attach a role to the EC2 Instance 
+	
+	aws cli 
+	
+	
+	AWS CLI :::
+	
+		Is a command line utility to access aws resources using command prompt/terminal 
+		
+		Create some no. of test servers(ec2 instances)
+		
+		- Using AWS Consoel if we create EC2 Instance , it is manual process.
+		
+		
+	Create some automation scripts :::
+	
+	shell script / python script 
+	
+	
+	aws cli 
+	
+	Install AWS CLI on the local machine(Window/Linux/Mac)
+	Using AWS Cli we can do the process automation 
+	
+	aws configure 
+	
+		ACCESS Key
+		SECRET KEY 
+		Region 
+	
+	Server/VM :::		Server is accessible using its IP Address :
+					z.z.z.z
+	
+		Application1 	==> Port 8080					z.z.z.z:8080
+		Application2	==> Port 80						z.z.z.z:80
+		Application3 	==> Port 3000					z.z.z.z:3000
+
+		InBound Rules :::
+		
+		OutBound Rules :::
+			
+			
+	How manage the service Packages on the EC2 Instance.
+		The Services can be accessible using its' port number
+		
+		
+######################
+Day 7: 26th July 2024
+######################		
+
+
+	IAM 
+	
+	EC2 Instances 
+	
+	S3 
+	
+	EBS 
+	
+	aws cli ::
+	
+	aws configure ::
+	
+	
+	How to access AWS Resources using aws cli
+	
+		
+		
+	EC2 Service :::		To Create Virtual Machines!( Computing Device )
+	
+		- AMI - Amazon Machine Images 											# Server Template - Operating System
+		
+		- Instance Type 														# CPU / RAM 
+		
+		- Key Pair 
+		
+		- Security Group 														# Like a Firewall to Virtual Machines  
+		
+		- VPC/Subnet/Route Table/Route Associations/Internet Gateways			# Networking components 
+		
+		- EBS Volumes	/ S3 Buckets											# External Storage 
+		
+		- IAM Roles																# To Access any other Service 
+		
+		- User Data 															# For Bootstraping - Startup Task
+		
+		
+		- Web Applications :
+
+		- IP Address to Access the Application
+		
+		- Auto-Scaling Group 
+		
+		- Load Balancing 
+		
+		- Deployment Group
+	
+	(VM) www.amazon.com / www.onlineticketbookingsystem.com	==> Network Traffic is as expected 
+																			50000 users 
+																			100000 Users	
+	EC2 Instances :::
+	
+		Trouble shooting ::::
+	
+	
+	- AMI - Amazon Machine Images 
+	
+		- It is server Template:
+		
+		- Used to quickly spin-up the EC2 Instances
+		
+		
+		- AMI Should be completely scanned as per company's security policies and compliances.
+		
+		- The AMI should be save and free from all external issues.
+		
+		How to Create AMI ???
+		
+		Purpose of Creating AMI ???
+		
+			
+			
+			
+	Testing Team :
+	
+		- Requirement is to test the application.
+		
+		
+		Computing Device / Virtual Machine 
+		
+			using - amazon linux ami, with 2 CPU, 4GB RAM 
+			
+			create one instance - ( Test Server)
+			
+			Install the required Testing Tools 
+				- TestNG 
+				- Selenium
+				- Reporting Tools 
+				
+			Enable for testing.
+			
+			Yes. Now The Testing Team can test the application
+			
+			Once Testing is completed, That Application can be moved to production environment. (JULY Release) - LIVE 
+			
+			
+			create application - test application - deploy to production environment - Terminate the test servers
+			
+			Before we terminate the instance take a copy of that ami.
+			
+			ami - amazon linux 2					new-testserver-ami
+			Install the required Testing Tools 
+				- TestNG 
+				- Selenium
+				- Reporting Tools 			
+			
+			
+		
+		Next Release - (Aug Release)
+			
+			create application - test application - deploy to production environment
+			
+			
+			Create Test Server using new-testserver-ami
+			
+			
+			Based on Existing EC2 Instance we can create New AMI and use that ami for further Instance Creations
+			
+			
+			
+		- Instance Type 														# CPU / RAM 
+		
+			--> 
+						
+				
+				
+		- Security Group 	
+
+
+			VM - 
+			
+				Web Application1 : 		<VM_Ip_address>:<application_port>
+				Web Application2 :
+				Web Application3 :
+				
+				User can Access the Applications running in VM using Security Group Inbound Rules
+				
+				
+				Inbound Rules 
+				Outbound Rules 
+
+Tasks: 
+				
+Login to AWS Console 
+
+Create IAM User with AdministratorAccess
+
+Create EC2 Instance - Linux based AMI - eligible for free tier & t2.micro 
+
+Login to that instance using Mobaxterm/Terminal 
+
+IAM Service 
+
+	create user/group/policies/roles 
+	
+AMI 
+
+	Launch new instance using AMI 
+	
+	Create AMI based on the instance 
+	
+	Explore other AMIs avaialable 
+	
+Instance Type :
+	
+	Explore various types of Instance - t2.micro/......
+	Explore how to change the instance type 		
+		
+		
+				
+######################
+Day 8: 29th July 2024
+######################					
+
+
+	S3 Bucket :::
+	
+	amazon linux  default user name : ec2-user
+	
+	ubuntu linux  default user name : ubuntu
+	
+	S3 Bucket :::
+	
+	AMI :::
+	
+	
+	
+AWS DevOps Services :::
+
+	Code Commit :		-- gihub
+	
+	Code Build :	Build the source code : Create Artifacts 
+	
+	The Artifacts are saved in s3 Bucket 
+	
+	Code Deploy :
+	
+	
+	Code Pipeline : Used to orchestrate builds and deployments 
+		
+	Developer :
+	
+		Write a Java Program :(source code)
+		
+		Compile the code!
+		
+		Create Artifacts
+		
+		Tested 	
+		
+		
+Environments :
+
+	Non-Prod Environments													Prod Environments
+
+		Dev Environment
+		
+		Build Environment
+			Build : is a process of compiling the source code and create artifacts(Binaries - *.war/*.jar/*.exec/*.dll)
+			
+			
+		
+		Test Environment
+			QA - Quality Assurance Testing 
+			UAT - User Acceptance Testing 		===============>				Production Servers  
+			
+		
+Host my website:
+
+in AWS 	
+
+Create web components :
+
+Application Components: Java/C#/
+
+resources :
+	- html 
+	- js
+	- css
+	- images 
+	
+	
+3 - tier application Architecture :::
+
+	- Front-End Layer - User Interface Design
+	
+	- Application Layer - Business Logic
+	
+	- Back-End Layer - Database 
+	
+	
+Eg.: 
+
+	User Registration Process :
+	
+	User Login Process :
+	
+	
+S3 Bucket :
+
+EBS Volumes :
+
+Elastic Block Store - Volumes :;
+
+	Hard-disk - > partitioned as c: /d: 
+	External Storage 
+	
+	
+	Back-up and restore:
+	
+	EC2 Instance :::
+	
+		30 GB of EBS Volume :
+		
+		
+		EBS Volumes ::
+		
+		Persistant Volumes :
+		
+		
+			Backup - Snapshot of the volume
+			
+			Recovery
+		
+	Routing the Request to the corressponding service!		
+
+		Host Based Routing 
+		
+		Path based Routing 
+	
+		www.google.com 			VPC
+			- gdrive
+			- translate
+			- maps
+			
+		url : www.google.com
+
+		Host Based Routing
+		
+		translate : www.translate.google.com 
+		maps: www.maps.google.com
+		
+		
+		www.gmail.com 
+		
+		Path based Routing :
+			
+			www.gmail.com/inbox 
+			
+			www.gmail.com/sent
+		
+		www.console.aws.amazon.com
+		
+		www.amazon.com 
+		
+		www.primevideos.com 
+		
+		
+				
+######################
+Day 9: 31st July 2024
+######################			
+	
+	AWS Cloud Services :::
+	
+	Environments ::::
+	
+Environments :
+
+	Non-Prod Environments													Prod Environments
+
+	Dev Environment
+	
+	Build Environment
+		Build : is a process of compiling the source code and create artifacts(Binaries - *.war/*.jar/*.exec/*.dll)
+		
+		
+	
+	Test Environment
+		QA - Quality Assurance Testing 
+		UAT - User Acceptance Testing 		===============>				Production Servers  
+		
+		
+	AWS Services ::::
+
+	Infra-Structure Admin Perspective 
+	
+		AWS Solutions Architects - Associate 	
+	
+	DevOps Perspective 
+	
+		DevOps Associate
+		
+		
+	- It is used to automate the Continous Integration, Continous Deployment of IT Services.
+	
+		- Continous Integration is the capability of the dev team to Continously integrate their changes to further testing without impacting others.
+		
+		- Continous Deployment is the automated of Application Deployment to Production Environment without any manual intervension.
+	
+		- Deployment/Promotion is a process of copying the artifacts from one environment to another enviroment  
+	
+Environments : What is all about?
+
+	Non-Production Environments	(VM)													Production Environments (LIVE Environment)
+	
+		Development Environment (VM)	Java Progam (High-level language)
+		
+			- completely owned by Dev Team 
+			- Create the Source Code 
+			
+		Build Environment (VM)	
+			- Application Build is the process of compiling the code and creating the artifacts(Binaries)
+				- Low-Level Language(Artifacts)
+		
+			- Compile the Source Code 
+			- Create Artifacts ( Binaries/Executables - *.war/*.jar/*.exec )
+	
+				Artifacts will be promoted to Test Environment for further testing 
+					
+				When you download a software thru internet?
+					- *.exec file 
+	
+		Testing Environments	
+			- This is owned by the Testing Team.
+			- Testing Team will create Test Scenarios/Test Cases 
+			
+			QA Environment (VM) 	- QA Testing Team  *.war
+				Funtional/Regression/Performance,....
+				
+				- Quality Assurance Testing 
+				- Perform Automated QA Testing
+		
+			UAT Environment	(VM)			*.war						================>	Production Servers (VM) - *.war
+				- User Acceptance Testing														For MobaXTerm, User Laptop/Desktop is the LIVE Environment 
+				- Perform UAT Testing 
+				- UAT Testing are done the by Business Users
+				- UAT Testing will be done based on the real time production/customer data
+
+			Eg.: 
+			
+				Tele-Comm Domain:
+				
+				Tele-Comm Service Providers 
+				
+				Tele-Comm SP1 - Introduce a new feature to their customers 
+
+								for initial 1 or 2 months 	==> Release this new service to end-users - Mobile-App/Web Appln.
+								Beta Testing 
+								
+								Business Users 
+
+
+The Need for Environments ????	
+
+	Tools:
+
+		
+		Non-Production Environments	(VM)	
+		
+			Dev Environment
+				IDEs - Eclipse Based IDEs / 
+				Integrated Development Environment - using this tool, developers will develop the source code 
+			
+			Build Environment
+				Build Tools 
+					- Maven/Gradle
+					
+			Testing 
+			
+				Testing Tools 
+				
+					TestNG
+					Selenium					
+					
+		Production Environment - LIVE Environment 			
+		
+			- Web Application Server - Used to run the web application
+				- httpd
+				- Tomcat 
+				- Nginx 
+		
+		
+		
+		
+		EC2 Instance : DEV 
+			- Create Application 
+			
+		EC2 Instance : BUILD 
+			- Build Application 
+			
+		EC2 Instance : TEST 
+			- Test Application
+			
+		EC2 Instance : PROD
+			- Deploy Application
+			
+		
+		
+		Setup the Non-Prod Environments :::
+				What should be the availability of the Non-Prod Environments ??
+						- Non-Prod Environments should be available only during business hours.
+							- 8AM - 10PM - Business Hours 
+				
+			VPC :
+				Subnets :
+				
+					EC2 Instance1 : DEV 
+						- Create Application 
+						
+					EC2 Instance2 : BUILD 
+						- Build Application 
+						
+					EC2 Instance3 : TEST 
+						- Test Application
+
+			
+		Setup the Prod-Environments ::: LIVE Environments
+				What should be the availability of the Prod Environments ??	
+					- Prod Environments should be available 24/7.
+					- Zero - Downtime!
+					
+			How to ensure High Availability of Production Environments
+										
+			VPC:	
+				Subnet :
+					EC2 Instance : PROD
+						- Deploy Application
+						
+						
+					Deployment Group :
+					
+						Group of Servers using for production deployment 
+						
+						Deployment_Group 
+								- VM1,2,3,4,5
+								
+						www.amazon.com 	- E_Commerce 
+						
+						Online Ticket Booking System -- Train Tickets
+						
+							Deployment_Group - Is the replica of servers 
+								How to create the replicas of servers - using the image copy 
+								- VM1,2,3,4,5,6,7,8,9,10	
+								
+							Auto-Scaling Group : 
+							Minimum & Maximum Limit
+							
+								Minimum 10 VM should be up and running
+								Miximum 500 VMs should be up and running
+
+								Scale-up 	===> Adding more VMs 
+								Scale-Down	===> Removing the VMs 
+
+								Storage : Initially we have assigned 1TB of EBS
+								CPU :
+								RAM :
+								Network traffic :
+								
+								
+								Database : --> RDS Service 
+								
+										1000 users access this machine
+										
+										50000
+						
+						
+DEV 
+
+BUILD 
+
+Test Environment :::
+
+- Create and setup a dedicated Test Environment ::
+
+	Create VPC
+	Create Subnet
+	Create Route Table 
+	Create Route Table Association 
+	Create Internet gateway
+	Create Security Group 
+	Create EC2 Instance using all the above components 
+	
+	Login to that EC2 Instance 
+	
+	Install the required Web Application Server like tomcat/nginx 
+	Execute the Web Application using tomcat/nginx 
+
+######################
+Day 10: 1st Aug. 2024
+######################		
+
+	Test Environment :::
+
+	- Create and setup a dedicated Test Environment ::
+
+		Create VPC
+		Create Subnet
+		Create Route Table 
+		Create Route Table Association 
+		Create Internet gateway
+		Create Security Group 
+		Create EC2 Instance using all the above components 
+		
+		Login to that EC2 Instance 
+		
+		Install the required Web Application Server like tomcat/nginx 
+		Execute the Web Application using tomcat/nginx 
+
+		How to save that data/file from ec2 instance to the s3 bucket
+		
+		
+	VPC : Virtual Private Cloud 
+	
+		Virtual Private Data Centre :
+		
+		
+		During AWS Account Creation process :
+		
+			Default VPC -> 
+			
+		Dedicated VPC :
+			Subnet : Is used to provide certain range of IP Address to the VPC 
+			Route Table : Is used route the request from external user to Subnet using Internet gataways.
+			Security Group
+			EC2 Instances 
+			Install the required tools 
+			
+			
+			
+
+		
+		Front-End Layer  	- User Interface 
+
+		Application Layer 	- Business Logic 
+		
+		Back-End Layer 		- Database
+			
+			
+
+		0. Create AWS ACCOUNT
+			- Create IAM User with AdministratorAccess
+			- Login to AWS Console as IAM User 
+			
+		1. Create VPC :::
+			- 
+			
+			Identify the range of IP address to be assigned to VPC and Subnet.
+			
+			CIDR - Classless Inter-Domain Routing 
+			
+				It is just a IP Addr allocation method to improve the routing capabilities between the nodes!
+
+			VPC CIDR : 100.0.0.0/16
+				
+				
+				VPC can have more than one subnet 
+			
+		2. Create Subnets :::
+			Use the availability zones to ensure high availability 
+			
+			Refer the existing vpc to create public and private subnets
+			
+			VPC CIDR : 100.0.0.0/16
+			
+			Subnet1 : 100.0.1.0/24
+			
+			Subnet2 : 100.0.2.0.24
+			
+		3. Create Internet-Gateway
+		
+			Create IGW and attach it to VPC
+
+		4. Create Route Table 
+			
+			- Attach the subnet 
+			
+			- Create Route 
+				for public set 0.0.0.0
+					& igw
+					
+				for private no need to set any global route.
+				
+		5. Security Group 
+			
+			- Create security Group and update the inbound and outbound rule for any EC2 Instance 
+			
+		
+		6. Create EC2 Instance 
+			- Attach the newly created VPC,Subnet and Security Group to this Ec2 Instance.
+
+
+			
+######################
+Day 11: 2nd Aug. 2024
+######################
+
+	IAC Tools :
+	
+		Terraform & Cloudformation is used to provision/Create the AWS Cloud Resources 
+		
+		Install the required Web Application Server like tomcat/nginx 
+		Execute the Web Application using tomcat/nginx 
+				
+		How to install and setup the required tools in the EC2 Instances :::
+		
+		Package 
+		
+		EC2 Instances :	Linux/Windows/Mac 
+		
+		Linux Operating System 
+		
+			- Is a Open-Source
+			
+			- CUI Based. 
+		
+		Linux Distributions :::
+			- There are various types/flavors of Linux OS
+			
+				- Debian/Ubuntu 
+				
+				- Centos / RHEL 
+				
+				- Fedora
+				
+				On AWS :
+				
+				- Amazon Linux
+				
+				
+			To Install and manage any package in Linux Machines, we use Package Managers 
+			
+			Install/Upgrade/Uninstall
+			
+			Windows Installer! - Is a package manager for Windows OS.
+			
+			For Linux OS :
+			
+			Package Managers :
+			
+				The Package Manager can be executed as a root user only!
+			
+			
+				- Debian/Ubuntu 		==> apt-get / apt
+				
+				- Centos / RHEL 		==> yum 
+				
+				- Fedora				==> dnf(If Latest version of fedora)
+											yum(If it is previous version of fedora)
+				
+				On AWS :
+				
+				- Amazon Linux			==> dnf(Latest version of Amazon Linux ami)
+											yum(Previous version of Amazon Linux ami)
+											
+											
+			Connect to EC2 Instance
+			
+			Login 
+			
+			Use the package manager to manage the package 
+			
+			
+		Create EC2 Instance :
+		
+			1. EC2 Instances- ubuntu											# user_Name - ubuntu
+			2. Previous version of Amazon Linux -- same as centos/rhel			# user_Name - ec2-user
+			
+		Connect - using SSH Agent/Terminal/EC2 Instance Connect option
+		
+		Login to Instance 
+		
+		Use the Package Manager to Install/Upgrade/Uninstall the Packages 
+		
+		Package :
+		
+			- Package can run as a stand-alone tool/task
+
+			- Package can run as a service
+				- The Service run on specific port
+				- To run any service package we need enable the corresponding port.
+				
+		How to Install the packages on Linux Machines ?
+			- tool 
+				Eg.: git/ansible/
+			- service 
+				Eg.: jenkins/docker/
+				
+		As a best practise, use :
+		
+			Elevate the access level to root access level
+			
+			clear					# Clear the screen
+			sudo -i 				# Elevate to root access level
+			apt update -y 			# Update the default packages provided by the service provider
+			
+		
+		Then, install the required packages :
+		
+			It is always recommended to use offical documentation to manage the packages.
+		
+		
+			git 					# SCM Tool - for managing source code.
+			
+			sudo -i 
+			
+			apt update -y 
+			
+			apt install git -y 		# Install git 		https://git-scm.com/downloads
+			
+			apt remove git -y		# Unstall git 
+			
+			git --version			# Check the install git version 
+			
+			
+		Install nginx Service on Ubuntu :::		https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/
+		
+			sudo -i
+			apt update -y 
+			apt install nginx -y
+		
+			nginx -v 				# Verify the version 
+			
+			systemctl status nginx	# To Check the status of nginx service 
+
+			systemctl stop nginx	# To stop nginx service 
+
+			systemctl start nginx	# To start nginx service 
+
+			systemctl restart nginx	# To restart nginx service 
+			
+			systemctl enable nginx	# To setup the nginx as a startup task. Whenever we restart the EC2 Instance, nginx will start automatically
+
+			
+		To Access nginx or any service through web browser;
+		
+		Use the <public_ip_address>:<application_port_number>
+			
+			
+			Eg.: 
+			
+			65.1.94.74:80
+			
+		
+		Locate the Web Application :
+		
+		cd /usr/share/nginx
+		
+		index.html 
+			
+
+######################
+Day 12: 5th Aug. 2024
+######################	
+
+	EC2 Instances - Test Environment!
+	
+	EC2 Instance ::: 
+		- Virtual Machine! - Computing Device
+		
+	awscli - agent using to interact with aws services.
+	
+	IAM User ????
+	
+	
+	
+	What are all the purpose of EC2 Instance ??
+	
+The Need for Environments ????	
+
+	Tools:
+
+Environments :
+
+	Non-Prod Environments													Prod Environments
+
+		Dev Environment
+		
+		Build Environment
+			Build : is a process of compiling the source code and create artifacts(Binaries - *.war/*.jar/*.exec/*.dll)
+			
+			
+		
+		Test Environment
+			QA - Quality Assurance Testing 
+			UAT - User Acceptance Testing 		===============>				Production Servers  
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~
+		
+		Non-Production Environments	(VM)	
+		
+			Dev Environment
+				IDEs - Eclipse Based IDEs / 
+				Integrated Development Environment - using this tool, developers will develop the source code 
+			
+			Build Environment
+				Build Tools 
+					- Maven/Gradle
+					
+			Testing 
+			
+				Testing Tools 
+				
+					TestNG
+					Selenium					
+					
+		Production Environment - LIVE Environment 			
+		
+			- Web Application Server - Used to run the web application
+				- httpd
+				- Tomcat 
+				- Nginx 
+~~~~~~~~~~~~~~~~~~~~~~~
+	
+	Mobile Phones!
+	
+	--> Storage Services like 
+			- S3 Buckets
+			- EBS Volumes 
+				- Hard-disk!
+				
+			- These Storage Volumes can be shared with any other users/services
+			
+	EC2 :
+		- Develop the Applications 
+		- Build the Applications
+		- Run/Deploy the Applications
+			Target Server -> QA/UAT/PROD - Servers
+		- Manage DBServers
+		- Manage Monitoring Servers
+		- Proxy/Load Balancing Servers
+		
+	While launcing the EC2 Instance, attach S3 Bucket to EC2 Instance.
+
+		Using IAM Role 
+		
+		1. Create S3 Buckets
+		2. Create IAM Role using S3fullAdminAccess/ReadAccess policies 
+		3. Attach IAM Role to EC2 Instance while launching
+		4. What next ??
+		
+	Build Server - EC2 Instance: VM 
+
+		1. Compile the Application Source Code 
+		2. Create the Application Artifacts 	- mywebapp.war 
+		3. Artifacts are archieved to External Artifactory Library - S3 Bucket/app-dir 
+		
+
+	QA Environment - Target Server - EC2 Instance: VM
+		1. Connect to S3 Bucket/app-dir 
+		2. Copy - mywebapp.war from S3 Bucket into the EC2 Instance  
+
+	UAT Environment - Target Server - EC2 Instance: VM
+		1. Connect to S3 Bucket/app-dir 
+		2. Copy - mywebapp.war from S3 Bucket into the EC2 Instance  
+
+	PROD Environment - Target Server - EC2 Instance: VM
+		1. Connect to S3 Bucket/app-dir 
+		2. Copy - mywebapp.war from S3 Bucket into the EC2 Instance  		
+	
+	
+
+Environment:
+
+	Dev-Server		--> mywebapp.java 
+	
+	Build-Server	--> Used to compile mywebapp.java and create aritifacts
+						mywebapp.war
+						copy mywebapp.war from build-server to any external storage volume like s3 Bucket 
+						
+	
+	Test-Servers
+		QA_Server	--> Download/copy mywebapp.war from S3 Bucket to QA Server
+		UAT-Server  --> Download/copy mywebapp.war from S3 Bucket to QA Server
+	
+	Prod-Server 	-->	Download/copy mywebapp.war from S3 Bucket to QA Server
+	
+	
+	ACCESS KEY and Secret Key?
+
+	
+	
+	aws configure 
+	
+	awscli --> Is a command line utility used to interact with AWS Services.
+	
+	
+	
+	sudo -i
+	
+	apt update -y
+	
+	apt install awscli
+	
+	aws configure
+	
+	s3 is one of the aws services 
+
+	aws s3 ls 											# List all buckets 
+	
+	aws s3 ls s3://sa-aws-s3-b2							# List files and folders from specific bucket
+	
+	aws s3 cp sa-mywebapp.war s3://sa-aws-s3-b2			# Copy file from EC2 Instance to S3 Bucket
+	aws s3 cp sa-mywebapp.war s3://sa-aws-s3-b2/dir1
+														
+			
+			
 	
