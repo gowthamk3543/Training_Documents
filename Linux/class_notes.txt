@@ -222,3 +222,1187 @@ Next :::
 			
 			Create File Access Control
 			
+#######################
+Day 17: 15th Aug. 2024
+#######################		
+			
+			
+			- Create a Directory(Folder)
+				- Is a collection of files and directories
+				
+			- Create a File 
+			
+			- Edit the files 
+				- Using File Editors - (vi editor / nano editor)
+			
+			- Delete the files
+
+			- Delete the Directories 
+			
+			- Copy the files/Directories 
+			
+			- Move the Files/Directories 
+			
+			- Rename the Files/Directories 
+			
+			Create File Access Control
+			
+		- File Management 	
+
+			- sudo -i 
+			
+			- exit 				# Logout from current linux user 
+
+			- ls 				# Is to List the files and Directories 
+			
+			- ll 				# Long Listing - to get the full property of the directory
+			
+			- ls -a				# List All(List all the files, including hidden files and directories)
+			
+			
+			Navigate to Directories :::
+
+				- pwd				# Get the Present Working Directory
+
+				- cd				# Change Directory
+				
+				- cd <dir_name> 	# Change to a specific directory				
+				
+				- cd /				# This command will take to the root directory			
+			
+				- cd ~				# This command will take to the home directory(Default Directory) of the specific linux user
+									Eg.: 	ubuntu 	===> /home/ubuntu 
+		
+									root	===> /root				
+	
+			
+				clear 				# Clear the Screen
+				
+				
+				mkdir <dir_name>	# used to Creae Directory 
+				
+				cd <dir_name>		# Change the directory
+				
+				cd ..				# Take the control back to previous directory
+	
+			Create Files :
+				
+					- touch <file_name>		# used to create an empty file 
+					
+					- echo "Record1" >> <file_name>		# To create a file with a record
+					
+					- echo "rec1" >> file1.txt	
+							# Used to add more record to the specific file 
+							
+					- echo "rec1" > file1.txt	
+							# Used to replace the file content with the new record 
+							
+					- vi <file_name>		# Used to Create / edit a file using vi editor
+					
+					
+			Read the file content :
+				
+					cat <file_name>			# Read the Content of a file
+					
+					
+					- vi <file_name>		# Used to Create / edit a file using vi editor
+
+					Eg.: 
+					
+						vi file1.txt 
+						
+							press i 		# goto insert mode 
+							
+							#type some contents
+							#type some contents				
+							
+							press esc :wq	# Save and Exit from a file 
+	
+							press esc :q!	# Exit from a file without saving it. 
+							
+			Rename File or Directory :::
+					
+						mv file1 file-new-name
+						
+						mv dir1 new-dir-name
+						
+			Delete a file or Directory :::
+					
+						rm <file_Name>			# Remove File  
+						
+						rm file1.txt 
+						
+						rm *.txt
+						
+						rm -r <dir_Name>		# Remove Directory
+						
+						rm -rf <dir_name>		# Forceful Deletion of Directory
+						
+						
+			Copy files from one directory to another :::
+			
+						cp <source_file> <Target_Dir>	# Used to copy a file to target folder 
+						
+						mv <source_file> <Target_Dir>	# Used to move a file to target folder 
+			
+						mv file1 file-new-name			# To Rename a file
+						mv dir1 new-dir-name			# To Rename a directory
+						
+						
+			File Access ::::
+			
+				Who can Access the file ?
+				
+					- By Default Owner will have complete access. 
+			
+    1  sudo -i
+    2  clear
+    3  clear
+    4  sudo -i
+    5  clear
+    6  apt update
+    7  sudo -i
+    8  clear
+    9  sudo -i
+   10  pwd
+   11  cd /
+   12  ls
+   13  cd home/
+   14  ls
+   15  cd ubuntu/
+   16  pwd
+   17  cd /home/
+   18  ls
+   19  cd ubuntu/
+   20  pwd
+   21  cd /
+   22  ls
+   23  tree
+   24  clear
+   25  ls
+   26  cd home
+   27  cd ubuntu/
+   28  lpwd
+   29  clear
+   30  pwd
+   31  sudo -i
+   32  pwd
+   33  cd /root/
+   34  cd /
+   35  clear
+   36  ls
+   37  pwd
+   38  cd home/
+   39  pwd
+   40  cd ubuntu/
+   41  pwd
+   42  c d/
+   43  cd /
+   44  ls
+   45  cd home/ubuntu/
+   46  pwd
+   47  ls
+   48  pwd
+   49  ls
+   50  sudo -i
+   51  clear
+   52  sudo -i
+   53  clear
+   54  history
+			
+			
+#######################
+Day 18: 19th Aug. 2024
+#######################		
+	
+		
+	- File Management 
+	- User Management 
+	- Access Management 
+	
+	- Remote Servers Management 
+	
+	- Process Automation(Shell Scripting)	
+	
+	
+	Access Management :::
+	
+		
+		File :
+		
+			script 
+			program 
+			artifacts 
+			
+			
+			>> ll 						# Long Listing 
+			
+		
+		drwxrwxr-x  2 ubuntu ubuntu 4096 Aug 16 14:49 dir4/
+		-rw-rw-r--  1 ubuntu ubuntu    0 Aug 16 14:54 file1.txt
+		
+		
+		----------
+		
+		-									# Denote dir or file (Possible value:  d or - )
+												'd'  Denotes Directory
+												'-'  Denotes File 
+												
+												
+		 ---								# Denote the Owner Level Access 
+												Possible Values: r / w /x 
+												r - Read only Access 
+												w - Write Access 
+												x - Execute Access 
+		
+			---								# Denote the Group Level Access
+												Possible Values: r / w /x 
+												r - Read only Access 
+												w - Write Access 
+												x - Execute Access
+
+			   ---							# Denote the Public User Level Access
+												Possible Values: r / w /x 
+												r - Read only Access 
+												w - Write Access 
+												x - Execute Access
+												
+		
+		User 
+		
+		Group 
+		
+		RBAC --> User_ID --> Group
+
+			dev_user1
+			Developer_grp 
+			
+			Test_User1 
+			Tester_Grp
+			
+		drwxrwxr-x  2 dev_user1 Developer_grp 4096 Aug 16 14:49 dir4/
+		-rw-rw-r--  1 Test_User1 Tester_Grp    0 Aug 16 14:54 file1.txt
+		
+		https://chmod-calculator.com/
+		
+		chmod <Access_Level> <File/Directory_Name>
+		
+		chmod 600 myjavaproject1/*
+		
+		Access Mode :::
+			r - Read only Access 
+			w - Write Access 
+			x - Execute Access	
+			
+
+	User Management ::::::
+	
+		Create Linux Users :::
+		
+			ubuntu user 
+			
+			root user 
+			
+			devopsadmin
+			
+		
+		Linun Machine uses SSH(Secure SHell) Connection
+			--> Host_Name,User_Name,Credentials
+		
+		How to Create Linux User?
+			- devopsadmin 
+
+		User Authentication?
+			SSH Authentication Methods :
+			
+				- Password Based Authentication
+				- Token Based Authentication
+				- Key Based Authentication
+					- Public Key/Private Key 
+				- Passwordless 
+			
+		
+		User Authorization?
+			--> Ownership 
+			
+		Create Linux User with SSH Keys :::
+		
+			useradd devopsadmin -s /bin/bash -m -d /home/devopsadmin
+
+			su - devopsadmin
+
+			ssh-keygen -t ecdsa -b 521										#ubuntu 22.04 or higher version of ubuntu				
+
+			cd .ssh
+			
+			ls ~/.ssh 
+
+			#You should see following two files:
+
+			#id_ecdsa - private key
+			#id_ecdsa.pub - public
+			
+			
+			cat id_ecdsa.pub > authorized_keys			# authorized_keys this file name should be same.
+			
+			authorized_keys :::
+				It is the copy of Public Key.
+				
+				Always the private key will be compared with the authorized_keys
+				
+			chmod 600 /home/devopsadmin/.ssh/*					# Used to Change the Access Mode of Files or Directories
+			
+			chown -R devopsadmin:devopsadmin /opt/tomcat/		# Used to Change the Ownership of Files or Directories
+			
+			
+		Get the List of Linux Users ::::
+			cat /etc/passwd
+		
+		Get the list of Linux User Groups :::: 
+			cat /etc/group
+	
+	
+		Create Password to any Linux User:
+		
+			As a root user ::
+			
+				passwd <user_name>
+				
+		root@ip-172-31-46-175:~# passwd devopsadmin
+		New password:
+		Retype new password:
+		passwd: password updated successfully
+		
+Next :::
+		
+	Remote Server Access :::
+	
+		AWS Cloud :
+		
+			VM1	
+			
+			VM2 
+					
+		1. Establish Connection to Remote Server  
+		2. Login to the Remote Server 
+		3. Copy the Files from one server to another server
+			using SCP
+		4. Manage the Remote Server - Install any package/Uninstall/Upgrade 
+		
+		Pre-requisites for Remote Server :::
+		
+			- Launch 2 VMs (VM1-Source & VM2-Target)
+			
+			- Ensure that Port 22 is enabled 
+			
+			- Create User in both the VMs 
+			
+			- Create SSH-Key in one server(VM1)
+			
+			- Use the public_Key as a authorized_keys in the target server(VM2)
+			
+			- Establish SSH Connection & Login to VM2(Target_Machine)
+			
+			- Copy Files from VM1 to VM2(Target_Machine)
+
+
+	SHELL Scripting!	
+
+
+#######################
+Day 19: 21st Aug. 2024
+#######################				
+
+	Remote Server Access :::
+	
+		AWS Cloud :
+		
+			VM1	(Server)
+			
+			VM2 (Client)
+					
+		1. Establish Connection to Remote Server  
+		2. Login to the Remote Server 
+		3. Copy the Files from one server to another server
+			using SCP
+		4. Manage the Remote Server - Install any package/Uninstall/Upgrade 
+		
+		Pre-requisites for Remote Server :::
+		
+			- Launch 2 VMs (VM1-Source & VM2-Target)
+			
+			- Ensure that Port 22 is enabled 
+			
+			- Create User in both the VMs 
+			
+			- Create SSH-Key in one server(VM1)
+			
+			- Use the public_Key as a authorized_keys in the Client Machine(VM2)
+			
+			- Establish SSH Connection & Login to VM2(Client_Machine)
+			
+			- Copy Files from VM1 to VM2(Client_Machine)
+
+
+Client_Machine ::::
+	
+useradd adminuser1 -s /bin/bash -m -d /home/adminuser1
+
+su - adminuser1	
+
+mkdir .ssh 
+
+cd .ssh 
+
+vi authorized_keys
+
+#paste the id_ecdsa.pub of devopsadmin user from Server machine to authorized_keys file in Client Machine 
+
+chmod 600 /home/adminuser1/.ssh/*
+	
+	
+	From Server execute this Command as a devopsadmin user :
+	
+	ssh adminuser1@172.31.1.144
+			
+			
+	- Copy Files from VM1 to VM2(Client_Machine)	
+
+
+		Server Machine ::::		
+			/home/devopsadmin/mywebappfile1.txt 
+			
+		Client Machine ::::
+			/home/adminuser1/mywebappfile1.txt
+	
+		#cp  /home/devopsadmin/mywebappfile1.txt home/devopsadmin/dir1/
+		
+		scp /home/devopsadmin/mywebappfile1.txt adminuser1@172.31.1.144:/home/adminuser1
+			
+		#nohup scp 
+		
+		
+		To Add Any User to a Group :
+		
+		usermod -aG <group_name> <user_name>
+		
+		usermod -aG docker devopsadmin
+		
+SHELL Scripting :::
+
+	Process Automation using shell scripting!
+	
+	Fundamentals of Shell Scripting!
+	
+	Scripting Languages ?
+		- Are used to perform some process automation/validations
+		- Light-weight 
+		- Eg.: java scripts / shell scripts / yaml script / groovy / python 
+			(vs)
+	Progamming Language ?
+		- Are used to create some business applications 
+		- Huge Collection of Programming components
+		- Eg.: Java/.Net Framework/Python/Ruby/Cobol/C
+		
+	
+	Shell Scripting Language :
+	
+		- Shell Scripting is a collection shell commands 
+		- Shell Script file should be saved as *.sh (Extention should be .sh)
+		
+	Install git ?
+	
+		Install all these packages in 200 VMs :::
+	
+		apt install openjdk11 -y
+		apt install git -y 
+		apt install maven -y 
+		apt install docker.io -y
+		apt install ansible -y 
+		
+		Shell Script :
+		
+installbuildtools.sh 
+#!/bin/bash
+sudo apt install openjdk11 -y
+sudo apt install git -y 
+sudo apt install maven -y 
+sudo apt install docker.io -y
+#sudo apt install ansible -y 
+
+save the script as installbuildtools.sh 
+
+/home/devopsadmin/scripts/$ ls 
+installbuildtools.sh	
+
+/home/devopsadmin/scripts/$ ./installbuildtools.sh		# Run the Shell Script!
+
+Any Scripting/Programming Languages :::
+
+
+	Data !!!
+	
+	Variable_Name to store data 
+	Type of Data - Data Type !
+	
+	var1 = 10001 
+	var2 = "asdfasdf"
+	var3 = 'a'
+	
+	Stud_Number = '101'	
+
+	
+	Validation / Conditional Statements 
+	
+		IF Conditions
+		SwitchCase Statements
+		
+	Stud_Number[5];		# Array Variable 		
+		==> {1,2,3,4,5}
+		
+	Looping Contructs 
+	
+		- for loop
+		- while loop
+		- do-while 
+	
+	Functions 
+		- String function
+		
+	Keyword 
+	
+	File Handling :
+	
+		- Create/Read/Write/Update/Delete the Files
+		
+	DataBase Handling using Programming Language 
+	
+	Remote Server Handling 
+	
+Next :::
+
+	Working with Shell Scripting!
+		
+		
+#######################
+Day 20: 22nd Aug. 2024
+#######################				
+
+#Install JDK 
+
+java --version
+
+cd /usr/lib/jvm/
+	
+	/usr/lib/jvm/java-21-openjdk-amd64/bin
+
+#edit /etc/profile & add JAVA_HOME
+
+vi /etc/profile
+
+
+export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64/bin"
+PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+
+source /etc/profile
+	
+	
+	Fundamentals of Shell Scripting!	
+	
+	Software Application ?
+	
+		- Collection of Programs.
+			
+	Program / Script?
+		- To Solve a problem.
+		- To Provide a Solution.
+	
+		- How to write a program?
+		- What are the pre-requisites to write a program?
+		
+		Problem Statement:
+		
+		The Requirement
+		
+		SDLC 
+		
+		Requirement Analysis Phase 
+		Design/Document 
+		Code/Programming 
+		Test 
+		Implementation
+		
+		Program 
+		
+		Algorithm :
+		
+			- The Step-by-step process to provide the solution/Task 
+			- It is written is high-level language 
+			
+			- Based on the algorithm, we create Source Code using Programming/Scripting Languages
+			
+		Problem Statement :
+		
+		Calculate sum of two numbers and print the result :
+		
+S1: Take two integers as input
+S2: Add the two integers 
+S3: Print the result
+
+
+int a; 
+int b;
+int c;
+pub=a,b,c;
+a=b+c;
+print a;
+
+1)int a=8 
+2)int b=7 
+3)int c=a+b 
+then 
+print c.
+
+
+ 5 + 5 	= ?
+ 
+ 30 + 30 = ?
+		
+ 20000000000000 + 3000000000000000 = ?
+ 
+ 222222222.55534 + 2342342.123123 = ?
+	
+	
+	Logical Thinking! 
+	
+
+Scripting :::
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to print Hello World on terminal using echo command
+
+Source Code:
+
+#!/bin/bash
+#
+echo "Hello World"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to print the calender month by default.
+
+Source Code:
+
+#!/bin/bash
+#	     
+echo "The Month is"
+cal # cal command displays current month by default
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to read user input and perform operations with them.
+
+Source Code:
+
+#!/bin/bash
+echo -n "Enter number 1 : " # -n option supresses newline
+read NUM1 # Read the user input from Standard Input and store in Variable NUM1
+
+echo -n "Enter number 2 : "
+read NUM2
+
+SUM=$(($NUM1 + $NUM2)) # Arithmetic expansion using double parentheses
+echo "The sum is $SUM"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show usage of if condition
+
+#Operators :: 6 Operators
+
+Source Code:
+
+
+#!/bin/bash
+
+NUM1=5 # variabe assignment
+NUM2=2
+
+if [ $NUM1 -gt $NUM2 ] # -gt is to test integer numbers
+then
+    echo "NUM1 > NUM2"
+fi
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show usage of if else condition
+
+Source Code:
+
+#!/bin/bash
+
+NUM1=2 # Variabe assignment
+NUM2=5
+
+if [ $NUM1 -lt $NUM2 ]  # -lt is to test intiger numbers
+then
+    echo "NUM1 < NUM2"
+else
+    echo "NUM1 > NUM2"
+fi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show usage of else if condition
+
+Source Code:
+
+#!/bin/bash
+#
+
+echo -n "Enter a number: "
+read NUM
+
+if [ $NUM -gt 0 ]
+then
+    echo "$NUM is +ve"
+elif [ $NUM -lt 0 ]
+then
+    echo "$NUM is -ve"
+else
+    echo "$NUM is 0"
+fi
+
+echo "done"
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to demonstrate case statement
+
+Source Code:
+
+#!/bin/bash
+
+echo -n "Enter a character: "
+read CHAR							# A , a ,e,i,o,u l
+
+case $CHAR in
+	a) echo "You entered $CHAR which is a vowel";;  # ;; Terminates each option
+	e) echo "You entered $CHAR which is a vowel";;
+	i) echo "You entered $CHAR which is a vowel";;
+	o) echo "You entered $CHAR which is a vowel";;
+	u) echo "You entered $CHAR which is a vowel";;
+	*) echo "You entered $CHAR which is not a vowel";; # Defaults to everything else
+esac
+
+echo "What if you enter upper case letters!!?, Check the next example"
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to demonstrate case statement
+
+Source Code:
+
+#!/bin/bash
+
+echo -n "Enter a character: "
+read CHAR
+
+case $CHAR in
+	a | A) # Test for both Lower or Upper case letter
+		# You may write commands in this fashion too!!, means multiline commands
+		echo "You entered $CHAR which is a vowel"
+		;; # Terminates each option
+	e | E) 
+		echo "You entered $CHAR which is a vowel"
+		;;
+	i | I) 
+		echo "You entered $CHAR which is a vowel"
+		;;
+	o | O) 
+		echo "You entered $CHAR which is a vowel"
+		;;
+	u | U) 
+		echo "You entered $CHAR which is a vowel"
+		;;
+	*)  # Defaults to everything else
+		echo "You entered $CHAR which is not a vowel"
+		;;
+esac
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to demonstrate case statement
+
+Source Code:
+
+#!/bin/bash
+
+echo -n "Oceans are larger than lakes (True or False) : "
+read USER_INPUT
+
+case $USER_INPUT in
+	"TRUE"| "True" | "true")
+		echo "Yes you are right"
+		;; # Terminates each option
+	"FALSE" | "Fasle" | "false")
+		echo "No your are wrong"
+		;;
+	*)  # Defaults to everything else
+		echo "Please enter either True or False"
+		;;
+esac
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to show usage of string compare operator == and !=
+
+Source Code:
+
+#!/bin/bash
+
+STR1="Hello"
+STR2="Hello"
+
+if [ ${STR1} == ${STR2} ]
+then
+    echo "Strings match"
+else
+    echo "Strings don't match"
+fi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to show usage of string compare operator -z and -n
+
+Source Code:
+
+#!/bin/bash
+
+STR1="Hello"
+STR2="Hello"
+
+if [ -z "${STR1}" ]
+then
+    echo "String1 is empty"
+else
+    echo "String1 is NOT empty"
+fi
+
+echo ":$STR:"
+if [ -n "${STR2}" ]
+then
+    echo "String2 is NOT empty"
+else
+    echo "String2 is empty"
+fi
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to show usage of logical operators
+
+Source Code:
+
+#!/bin/bash
+
+echo -n "Enter a NUM: "
+read NUM
+
+# Check whether a number is between 10 and 20 (Using AND -a operator)
+if [ $NUM -ge 10 -a $NUM -le 20 ]
+then
+    echo "$NUM is between 10 and 20"
+else
+    echo "$NUM is NOT between 10 and 20"
+fi
+
+echo -n "Enter another NUM: "
+read NUM
+
+# Check whether a number is between 10 and 20 (Using OR -o operator)
+if [ $NUM -lt 10 -o $NUM -gt 20 ]
+then
+    echo "$NUM is NOT between 10 and 20"
+else
+    echo "$NUM is between 10 and 20"
+fi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to show usage while loop
+
+Source Code:
+
+#!/bin/bash
+#
+
+COUNT=0
+
+while [ $COUNT -lt 5 ]
+do
+    echo "Loop count is ${COUNT}"
+    COUNT=$((COUNT + 1))
+done
+
+echo "Done"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sum of N natural numbers using while loop
+
+Source Code:
+
+#!/bin/bash
+#
+
+echo -n "Enter a number: "
+read NUM
+
+let SUM=0; 
+let I=1
+while [ $I -le $NUM ]
+do
+	SUM=`expr $SUM + $I`
+	I=$((${I} + 1))
+done
+
+echo "The sum of the first $NUM numbers is: $SUM"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to demonstarte for loop [ Bash syntax ]
+
+Source Code:
+
+#!/bin/bash
+#
+
+COUNT=0
+
+for i in 0 1 2 3 4
+do
+    echo "Loop count is ${COUNT}"
+    COUNT=$((COUNT + 1))
+done
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to demonstarte for loop [ C syntax ]
+
+Source Code:
+
+#!/bin/bash
+
+COUNT=0
+
+for ((i = 0; i < 5; i++))
+do
+    echo "Loop count is ${COUNT}"
+    COUNT=$((COUNT + 1))
+done
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of command line arguments, Here we access positional arguments using $1, $2 …
+
+Source Code:
+
+#!/bin/bash
+
+echo "Total no. of argument: $#"
+
+echo "Program name: $0"
+echo "1st argument: $1"
+echo "2nd argument: $2"
+echo "3rd argument: $3"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ A script to show the usage of command line arguments, Here we access arguments by iterating over $@
+
+Source Code:
+
+#!/bin/bash
+
+echo "Total no. of argument: $#"
+echo "Argument list: $@" # Commonly used
+echo "Argument list: $*"
+
+# Iterate over arguments ($@)
+for ARG in $@
+do
+    echo $ARG
+done
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of function
+
+Source Code:
+
+
+print_hello#!/bin/bash
+
+# Function definition
+function print_hello()
+{
+    	echo "====="
+    	echo "Hello"
+    	echo "====="
+}
+
+# Call the function - print_hello
+print_hello
+
+print_hello
+print_hello
+print_hello
+print_hello
+
+
+#print_hello
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of function and how to pass arguments
+
+Source Code:
+
+#!/bin/bash
+
+# Function definition
+function find_sum()
+{
+    SUM=`expr $1 + $2`
+    echo $SUM
+}
+
+# Pass arguments 10 and 20 to find_sum function
+find_sum 10 20 # 30
+
+# Save the output of function in a variable
+RESULT=`find_sum 100 200`
+echo $RESULT	# 300
+
+
+num1=5
+num2=5
+
+
+sample1.sh
+
+#!/bin/bash
+num1=$1
+num2=$2
+
+num3=$num1 + $num2
+
+num3=$1 + $2 + $3 
+
+echo $num3 
+
+sh sample1.sh 34 45 43
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of function and how to pass arguments Inside function:
+$# – Gives no. of arguments
+$@ – Contains the arguments to function
+Accessing function arguments is similar to accessing command line arguments
+
+Source Code:
+
+#!/bin/bash
+
+# Function definition
+function find_sum()
+{
+    echo "Arg count: $#"
+    echo "Arg list: $@"
+    SUM=0
+    # Iterate over function arguments
+    for ARG in $@
+    do
+	SUM=`expr $ARG + $SUM`
+    done
+
+    echo $SUM
+}
+
+# Call find_sum with many arguments
+find_sum 1 2 3 4 5
+
+find_sum 10 20
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show how to declare an array and access its elements
+
+Source Code:
+
+#!/bin/bash
+
+# Declare an array
+FRUITS=(apple mango banana orange)
+
+# Print value of each element
+echo "element 0: ${FRUITS[0]}"
+echo "element 1: ${FRUITS[1]}"
+echo "element 2: ${FRUITS[2]}"
+echo "element 3: ${FRUITS[3]}"
+
+# Print size / length of array
+echo "Length: ${#FRUITS[@]}"
+echo "Whole array: ${FRUITS[@]}"
+echo "Whole array: ${FRUITS[*]}"
+
+echo "Looping over array elements"
+# Iterate over array elements
+for ITEM in ${FRUITS[@]}
+do
+    echo $ITEM
+done
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to store all cmd line arguments to a array and prints
+
+Source Code:
+
+#!/bin/bash
+
+ARG=($*)
+
+echo ${ARG[0]}
+echo ${ARG[1]}
+echo ${ARG[2]}
+echo ${ARG[3]}
+echo ${ARG[4]}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to demonstrate different types of array access
+
+Source Code:
+
+#!/bin/bash
+#
+
+array=(zero one two three four five)
+
+# Element 0   1   2    3   4   5
+echo ${array[0]}       #  zero
+echo ${array:0}        #  zero, Parameter expansion of first element,+ starting at position # 0 (1st character).
+echo ${array:1}        #  ero, Parameter expansion of first element, + starting at position # 1 (2nd character).
+echo "--------------"
+echo ${#array[0]}      #  4, Length of first element of array.
+echo ${#array}         #  4, Length of first element of array. (Alternate notation)
+echo ${#array[1]}      #  3, Length of second element of array. Arrays in Bash have zero-based indexing.
+echo ${#array[*]}      #  6, Number of elements in array.
+echo ${#array[@]}      #  6, Number of elements in array.
+echo "--------------"
+
+# Quoting permits embedding whitespace within individual array elements.
+array2=([0]="first element" [1]="second element" [3]="fourth element")
+
+echo "The ${array2[0]}"   # first element
+echo "The ${array2[1]}"   # second element
+echo "The ${array2[2]}"   # Skipped in initialization, and therefore null.
+echo "The ${array2[3]}"   # fourth element
+echo "The lenght of ${array2[0]} ${#array2[0]}" 	   # 13 (length of first element)
+echo "The number of elements in the array ${#array2[*]}"  # 3  (number of elements in array)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to demostrate usage of sed command
+
+Source Code:
+
+#!/bin/bash
+
+# Basic text substitution using sed
+echo "Bash Scripting Bash Language" | sed 's/Bash/Perl/'
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+	
